@@ -9,30 +9,34 @@
 import Cocoa
 import WebKit
 
-class StatusMenuController: NSObject, WKNavigationDelegate {
+class StatusMenuController: NSObject, PanelControllerDelegate {
     
     @IBOutlet weak var statusMenu: NSMenu!
-    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(20)
+    let popover = NSPopover()
+    var popoverIsOpen = false
     
-    let webView = WebView(frame: NSRect(x: 0, y: 0, width: 400, height: 300))
+    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(20)
+    var statusItemView: StatusItemView?
+    
+    let panelController = PanelController()
     
     override func awakeFromNib() {
         let icon = NSImage(named: "Todo")
         icon?.size = NSSize(width: 15, height: 15)
         icon?.template = true // best for dark mode
         statusItem.image = icon
-        statusItem.menu = statusMenu
+        statusItem.button?.target = self
+        statusItem.button?.action = Selector("togglePopover")
         
-        webView.mainFrameURL = "https://keep.google.com"
+        self.statusItemView = StatusItemView(statusItem: self.statusItem)
         
-        let webItem = NSMenuItem(title: "testing", action: "reloadPressed:", keyEquivalent: "")
-        webItem.view = webView
-       
-        statusItem.menu?.addItem(webItem)
     }
     
-    func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation) {
-        print("Finished navigating to url")
+    func togglePopover() {
+        self.panelController.hasActivePanel = !self.panelController.hasActivePanel
     }
-
+    
+    func statusItemViewForPanelController(panelController: PanelController) -> StatusItemView? {
+        return self.statusItemView
+    }
 }
