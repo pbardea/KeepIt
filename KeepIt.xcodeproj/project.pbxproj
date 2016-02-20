@@ -12,10 +12,6 @@
 		9FEA7ECF1C70D1A5002B1456 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FEA7ECD1C70D1A5002B1456 /* MainMenu.xib */; };
 		9FEA7EDA1C70D1A5002B1456 /* KeepItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEA7ED91C70D1A5002B1456 /* KeepItTests.swift */; };
 		9FEA7EE51C70D1A5002B1456 /* KeepItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEA7EE41C70D1A5002B1456 /* KeepItUITests.swift */; };
-		9FEA7EF31C70D423002B1456 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEA7EF21C70D423002B1456 /* StatusMenuController.swift */; };
-		9FEA7F6B1C727852002B1456 /* StatusItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEA7F6A1C727852002B1456 /* StatusItemView.swift */; };
-		9FEA7F6D1C7288C5002B1456 /* Panel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FEA7F6C1C7288C5002B1456 /* Panel.xib */; };
-		9FEA7F6F1C728942002B1456 /* PanelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEA7F6E1C728942002B1456 /* PanelController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,10 +43,6 @@
 		9FEA7EE01C70D1A5002B1456 /* KeepItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeepItUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FEA7EE41C70D1A5002B1456 /* KeepItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepItUITests.swift; sourceTree = "<group>"; };
 		9FEA7EE61C70D1A5002B1456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9FEA7EF21C70D423002B1456 /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
-		9FEA7F6A1C727852002B1456 /* StatusItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusItemView.swift; sourceTree = "<group>"; };
-		9FEA7F6C1C7288C5002B1456 /* Panel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Panel.xib; sourceTree = "<group>"; };
-		9FEA7F6E1C728942002B1456 /* PanelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanelController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,9 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				9FEA7EC91C70D1A5002B1456 /* AppDelegate.swift */,
-				9FEA7EF21C70D423002B1456 /* StatusMenuController.swift */,
-				9FEA7F6A1C727852002B1456 /* StatusItemView.swift */,
-				9FEA7F6E1C728942002B1456 /* PanelController.swift */,
 				9FEA7ECB1C70D1A5002B1456 /* Assets.xcassets */,
 				9FEA7F701C741E80002B1456 /* Views */,
 				9FEA7ED01C70D1A5002B1456 /* Info.plist */,
@@ -134,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				9FEA7ECD1C70D1A5002B1456 /* MainMenu.xib */,
-				9FEA7F6C1C7288C5002B1456 /* Panel.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -243,7 +231,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FEA7F6D1C7288C5002B1456 /* Panel.xib in Resources */,
 				9FEA7ECC1C70D1A5002B1456 /* Assets.xcassets in Resources */,
 				9FEA7ECF1C70D1A5002B1456 /* MainMenu.xib in Resources */,
 			);
@@ -270,9 +257,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FEA7F6F1C728942002B1456 /* PanelController.swift in Sources */,
-				9FEA7F6B1C727852002B1456 /* StatusItemView.swift in Sources */,
-				9FEA7EF31C70D423002B1456 /* StatusMenuController.swift in Sources */,
 				9FEA7ECA1C70D1A5002B1456 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
