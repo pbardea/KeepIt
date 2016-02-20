@@ -7,6 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="TodoMenuViewController" customModule="KeepIt" customModuleProvider="target">
             <connections>
+                <outlet property="checkBox" destination="Txy-EJ-FSq" id="U07-Bh-DT1"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -16,13 +17,13 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="20" horizontalPageScroll="10" verticalLineScroll="20" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ev-6F-P68">
+                <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="52" horizontalPageScroll="10" verticalLineScroll="52" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ev-6F-P68">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
                     <clipView key="contentView" ambiguous="YES" id="9sr-5Y-Gc7">
                         <rect key="frame" x="1" y="1" width="478" height="270"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="18" rowSizeStyle="automatic" viewBased="YES" id="L4d-X6-7l4">
+                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="50" rowSizeStyle="automatic" viewBased="YES" id="L4d-X6-7l4">
                                 <rect key="frame" x="0.0" y="0.0" width="478" height="270"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
@@ -38,18 +39,26 @@
                                         <customCell key="dataCell" alignment="left" id="aAf-ES-sKz"/>
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
-                                            <tableCellView id="6c7-15-NGl">
-                                                <rect key="frame" x="1" y="1" width="475" height="17"/>
+                                            <tableCellView id="6c7-15-NGl" customClass="TodoListCellView" customModule="KeepIt" customModuleProvider="target">
+                                                <rect key="frame" x="1" y="1" width="475" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Txy-EJ-FSq">
-                                                        <rect key="frame" x="0.0" y="-1" width="475" height="18"/>
-                                                        <buttonCell key="cell" type="check" title="Title" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="8bN-Pt-yPE">
+                                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="Txy-EJ-FSq" userLabel="CheckBox">
+                                                        <rect key="frame" x="0.0" y="16" width="475" height="18"/>
+                                                        <buttonCell key="cell" type="check" title="Title" bezelStyle="regularSquare" imagePosition="left" inset="2" id="8bN-Pt-yPE">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
                                                     </button>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Txy-EJ-FSq" firstAttribute="centerY" secondItem="6c7-15-NGl" secondAttribute="centerY" id="4uK-CA-F0K"/>
+                                                    <constraint firstItem="Txy-EJ-FSq" firstAttribute="leading" secondItem="6c7-15-NGl" secondAttribute="leading" constant="2" id="cA5-o0-n6a"/>
+                                                    <constraint firstItem="Txy-EJ-FSq" firstAttribute="centerX" secondItem="6c7-15-NGl" secondAttribute="centerX" id="caa-U5-i3j"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="checkBox" destination="Txy-EJ-FSq" id="wWh-zM-sx1"/>
+                                                </connections>
                                             </tableCellView>
                                         </prototypeCellViews>
                                     </tableColumn>
@@ -63,7 +72,7 @@
                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </clipView>
                     <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="X1W-29-gMy">
-                        <rect key="frame" x="1" y="117.99978479743004" width="237.99952507019043" height="16"/>
+                        <rect key="frame" x="1" y="-15" width="0.0" height="16"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="DfW-hW-Q4A">

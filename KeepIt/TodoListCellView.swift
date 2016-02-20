@@ -9,6 +9,9 @@
 import Cocoa
 
 class TodoListCellView: NSTableCellView {
+    
+    
+    @IBOutlet weak var checkBox: NSButton!
 
     override func drawRect(dirtyRect: NSRect) {
         super.drawRect(dirtyRect)

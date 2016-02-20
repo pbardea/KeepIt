@@ -25,7 +25,7 @@ class Todo {
 
 class TodoMenuViewController: NSViewController {
     
-    var todoList = [Todo(title: "Thing 1"), Todo(title: "Thing 2")]
+    var todoList = [Todo(title: "Thing 1"), Todo(title: "Thing 2"), Todo(title: "Thing 2"), Todo(title: "Thing 2"), Todo(title: "Thing 2"), Todo(title: "Thing 2")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,11 +41,12 @@ extension TodoMenuViewController: NSTableViewDataSource {
     }
     
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        let cellView: NSTableCellView = tableView.makeViewWithIdentifier(tableColumn!.identifier, owner: self) as! NSTableCellView
+        let cellView: TodoListCellView = tableView.makeViewWithIdentifier(tableColumn!.identifier, owner: self) as! TodoListCellView
         
         if tableColumn!.identifier == "todoListColumn" {
             let todoItem = self.todoList[row]
             cellView.backgroundStyle = NSBackgroundStyle.Light
+            cellView.checkBox.title = todoItem.title
             return cellView
         }
         

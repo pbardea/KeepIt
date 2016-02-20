@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F86CCDA1C78D4A400F86DFA /* TodoListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F86CCD91C78D4A400F86DFA /* TodoListCellView.swift */; };
+		9F86CD171C78DF1C00F86DFA /* KeepIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F86CD151C78DF1C00F86DFA /* KeepIt.xcdatamodeld */; };
 		9F9D80B41C780C6200A85B83 /* TodoMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D80B21C780C6200A85B83 /* TodoMenuViewController.swift */; };
 		9F9D80B51C780C6200A85B83 /* TodoMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F9D80B31C780C6200A85B83 /* TodoMenuViewController.xib */; };
 		9FEA7ECA1C70D1A5002B1456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEA7EC91C70D1A5002B1456 /* AppDelegate.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F86CCD91C78D4A400F86DFA /* TodoListCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListCellView.swift; sourceTree = "<group>"; };
+		9F86CD161C78DF1C00F86DFA /* KeepIt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KeepIt.xcdatamodel; sourceTree = "<group>"; };
 		9F9D80B21C780C6200A85B83 /* TodoMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoMenuViewController.swift; sourceTree = "<group>"; };
 		9F9D80B31C780C6200A85B83 /* TodoMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TodoMenuViewController.xib; sourceTree = "<group>"; };
 		9FEA7EC61C70D1A5002B1456 /* KeepIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,8 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				9FEA7EC91C70D1A5002B1456 /* AppDelegate.swift */,
+				9F86CD151C78DF1C00F86DFA /* KeepIt.xcdatamodeld */,
 				9F9D80B31C780C6200A85B83 /* TodoMenuViewController.xib */,
 				9F9D80B21C780C6200A85B83 /* TodoMenuViewController.swift */,
+				9F86CCD91C78D4A400F86DFA /* TodoListCellView.swift */,
 				9FEA7EF21C70D423002B1456 /* StatusMenuController.swift */,
 				9FEA7ECB1C70D1A5002B1456 /* Assets.xcassets */,
 				9FEA7ECD1C70D1A5002B1456 /* MainMenu.xib */,
@@ -260,7 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FEA7EF31C70D423002B1456 /* StatusMenuController.swift in Sources */,
+				9F86CD171C78DF1C00F86DFA /* KeepIt.xcdatamodeld in Sources */,
 				9F9D80B41C780C6200A85B83 /* TodoMenuViewController.swift in Sources */,
+				9F86CCDA1C78D4A400F86DFA /* TodoListCellView.swift in Sources */,
 				9FEA7ECA1C70D1A5002B1456 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,6 +512,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9F86CD151C78DF1C00F86DFA /* KeepIt.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9F86CD161C78DF1C00F86DFA /* KeepIt.xcdatamodel */,
+			);
+			currentVersion = 9F86CD161C78DF1C00F86DFA /* KeepIt.xcdatamodel */;
+			path = KeepIt.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9FEA7EBE1C70D1A5002B1456 /* Project object */;
 }
