@@ -22,14 +22,23 @@ class TodoMenuViewController: NSViewController {
     
     var directoryItems: [Todo]? = [Todo(title: "Item 1"), Todo(title: "Item 2")]
     
-    @IBOutlet weak var todoList: NSTableView!
+    let todoList: NSTableView = NSTableView()
+    let titleColumn = NSTableColumn(identifier: "title")
+    let completedColumn = NSTableColumn(identifier: "completed")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        todoList.frame = self.view.bounds
+        
+        todoList.addTableColumn(completedColumn)
+        todoList.addTableColumn(titleColumn)
+        todoList.backgroundColor = NSColor(colorLiteralRed: 1.0, green: 0, blue: 0, alpha: 0.5)
+
         // Do view setup here.
         todoList.setDelegate(self)
         todoList.setDataSource(self)
-        todoList.backgroundColor = NSColor.clearColor()
+        
+        self.view.addSubview(todoList)
     }
     
 }
