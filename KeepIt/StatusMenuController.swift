@@ -22,6 +22,7 @@ class StatusMenuController: NSObject, PanelControllerDelegate {
     
     override func awakeFromNib() {
         let icon = NSImage(named: "Todo")
+        statusItem.menu = statusMenu
         icon?.size = NSSize(width: 15, height: 15)
         icon?.template = true // best for dark mode
         statusItem.image = icon
